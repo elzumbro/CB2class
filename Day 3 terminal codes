@@ -1,0 +1,866 @@
+[cb2@dragonxpvb3-009 ~]$ cd /home
+[cb2@dragonxpvb3-009 home]$ ls
+cb2
+[cb2@dragonxpvb3-009 home]$ cd
+[cb2@dragonxpvb3-009 ~]$ ls
+Desktop  Documents  Downloads  Pictures  Public  R  Templates  Videos
+[cb2@dragonxpvb3-009 ~]$ ls -a
+.              .esd_auth           R
+..             .ICEauthority       .Rhistory
+.bash_history  .ipynb_checkpoints  .rstudio-desktop
+.bash_logout   .ipython            .ssh
+.bash_profile  .java               Templates
+.bashrc        .jupyter            .vboxclient-clipboard.pid
+.cache         .local              .vboxclient-display-svga-x11.pid
+.config        .mozilla            .vboxclient-draganddrop.pid
+.dbus          Pictures            .vboxclient-seamless.pid
+Desktop        .pki                Videos
+Documents      Public
+Downloads      .r
+[cb2@dragonxpvb3-009 ~]$ echo $HOME
+/home/cb2
+[cb2@dragonxpvb3-009 ~]$ cd ~
+[cb2@dragonxpvb3-009 ~]$ ls
+Desktop  Documents  Downloads  Pictures  Public  R  Templates  Videos
+[cb2@dragonxpvb3-009 ~]$ cd
+[cb2@dragonxpvb3-009 ~]$ ls
+Desktop  Documents  Downloads  Pictures  Public  R  Templates  Videos
+[cb2@dragonxpvb3-009 ~]$ cd /
+[cb2@dragonxpvb3-009 /]$ ls
+bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
+boot  etc  lib   media  opt  root  sbin  sys  usr
+[cb2@dragonxpvb3-009 /]$ cd media/sf_Emily
+[cb2@dragonxpvb3-009 sf_Emily]$ ls
+CB2_101
+Comparison of peak torque and aerobic capacity asymmetries in the lower limbs 07162018_1704.docx
+MININT
+pagefile.sys
+$RECYCLE.BIN
+SRS manuscript 07152018_1336.docx
+System Volume Information
+Virtual Machine
+[cb2@dragonxpvb3-009 sf_Emily]$ cd CB2_101
+[cb2@dragonxpvb3-009 CB2_101]$ ls
+bash_class_assignment.ipynb  linux_data  linux_data.tar.xz  selected_fastq
+[cb2@dragonxpvb3-009 CB2_101]$ jupytr-notebook
+bash: jupytr-notebook: command not found...
+[cb2@dragonxpvb3-009 CB2_101]$ jupyter-notebook
+[I 11:45:56.367 NotebookApp] Serving notebooks from local directory: /media/sf_Emily/CB2_101
+[I 11:45:56.367 NotebookApp] The Jupyter Notebook is running at:
+[I 11:45:56.367 NotebookApp] http://localhost:8888/?token=7e053ea0cb6fc4aa2e992b26b0f2e5752498c8835a66386d
+[I 11:45:56.367 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 11:45:56.374 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/cb2/.local/share/jupyter/runtime/nbserver-5619-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/?token=7e053ea0cb6fc4aa2e992b26b0f2e5752498c8835a66386d
+This tool has been deprecated, use 'gio open' instead.
+See 'gio help open' for more info.
+
+[E 11:45:58.101 NotebookApp] Could not open static file ''
+[W 11:45:58.200 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (::1) 49.01ms referer=http://localhost:8888/tree?token=7e053ea0cb6fc4aa2e992b26b0f2e5752498c8835a66386d
+[W 11:45:58.276 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (::1) 2.53ms referer=http://localhost:8888/tree?token=7e053ea0cb6fc4aa2e992b26b0f2e5752498c8835a66386d
+[W 11:46:01.712 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (::1) 2.04ms referer=http://localhost:8888/notebooks/bash_class_assignment.ipynb
+[W 11:46:01.835 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (::1) 2.57ms referer=http://localhost:8888/notebooks/bash_class_assignment.ipynb
+[W 11:46:02.475 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20211105114556 (::1) 2.68ms referer=http://localhost:8888/notebooks/bash_class_assignment.ipynb
+[I 11:46:03.706 NotebookApp] Kernel started: 76c124c7-2f62-4306-b677-115b9f28662a
+[I 11:46:05.292 NotebookApp] Adapting to protocol v5.1 for kernel 76c124c7-2f62-4306-b677-115b9f28662a
+[I 11:47:22.768 NotebookApp] Starting buffering for 76c124c7-2f62-4306-b677-115b9f28662a:8f8ba3f7de8d4fa2924571f133bd9b88
+^C[I 11:47:29.522 NotebookApp] interrupted
+Serving notebooks from local directory: /media/sf_Emily/CB2_101
+1 active kernel
+The Jupyter Notebook is running at:
+http://localhost:8888/?token=7e053ea0cb6fc4aa2e992b26b0f2e5752498c8835a66386d
+Shutdown this notebook server (y/[n])? cccccccccccy
+resuming operation...
+^C[I 11:47:35.410 NotebookApp] interrupted
+Serving notebooks from local directory: /media/sf_Emily/CB2_101
+1 active kernel
+The Jupyter Notebook is running at:
+http://localhost:8888/?token=7e053ea0cb6fc4aa2e992b26b0f2e5752498c8835a66386d
+Shutdown this notebook server (y/[n])? y
+[C 11:47:36.985 NotebookApp] Shutdown confirmed
+[I 11:47:36.987 NotebookApp] Shutting down 1 kernel
+[I 11:47:37.214 NotebookApp] Kernel shutdown: 76c124c7-2f62-4306-b677-115b9f28662a
+[cb2@dragonxpvb3-009 CB2_101]$ ls
+bash_class_assignment.ipynb  linux_data  linux_data.tar.xz  selected_fastq
+[cb2@dragonxpvb3-009 CB2_101]$ jupyter-notebook
+[I 12:42:31.394 NotebookApp] Serving notebooks from local directory: /media/sf_Emily/CB2_101
+[I 12:42:31.394 NotebookApp] The Jupyter Notebook is running at:
+[I 12:42:31.394 NotebookApp] http://localhost:8888/?token=e12bd3048e9cbc84c63e3e04d0c0038c4c275507d965254c
+[I 12:42:31.394 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 12:42:31.404 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/cb2/.local/share/jupyter/runtime/nbserver-6712-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/?token=e12bd3048e9cbc84c63e3e04d0c0038c4c275507d965254c
+This tool has been deprecated, use 'gio open' instead.
+See 'gio help open' for more info.
+
+[E 12:42:35.091 NotebookApp] Could not open static file ''
+[W 12:42:35.228 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (::1) 45.62ms referer=http://localhost:8888/tree?token=e12bd3048e9cbc84c63e3e04d0c0038c4c275507d965254c
+[W 12:42:39.039 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (::1) 2.53ms referer=http://localhost:8888/notebooks/bash_class_assignment.ipynb
+[W 12:42:39.180 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (::1) 2.36ms referer=http://localhost:8888/notebooks/bash_class_assignment.ipynb
+[W 12:42:39.954 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20211105124231 (::1) 2.46ms referer=http://localhost:8888/notebooks/bash_class_assignment.ipynb
+[I 12:42:41.274 NotebookApp] Kernel started: 29ad042e-1f96-4495-9f5c-dc26b8cfd554
+[I 12:42:42.922 NotebookApp] Adapting to protocol v5.1 for kernel 29ad042e-1f96-4495-9f5c-dc26b8cfd554
+[I 12:46:41.266 NotebookApp] Saving file at /bash_class_assignment.ipynb
+[I 12:48:41.268 NotebookApp] Saving file at /bash_class_assignment.ipynb
+[I 12:50:41.264 NotebookApp] Saving file at /bash_class_assignment.ipynb
+[I 12:52:41.265 NotebookApp] Saving file at /bash_class_assignment.ipynb
+[I 12:54:31.516 NotebookApp] Saving file at /bash_class_assignment.ipynb
+[I 12:56:41.266 NotebookApp] Saving file at /bash_class_assignment.ipynb
+[I 13:00:41.269 NotebookApp] Saving file at /bash_class_assignment.ipynb
+[I 13:02:41.269 NotebookApp] Saving file at /bash_class_assignment.ipynb
+[I 13:06:41.269 NotebookApp] Saving file at /bash_class_assignment.ipynb
+[I 13:07:22.602 NotebookApp] Saving file at /bash_class_assignment.ipynb
+[I 13:20:41.328 NotebookApp] Saving file at /bash_class_assignment.ipynb
+[I 13:22:41.334 NotebookApp] Saving file at /bash_class_assignment.ipynb
+[I 13:24:41.330 NotebookApp] Saving file at /bash_class_assignment.ipynb
+[I 13:42:41.657 NotebookApp] Saving file at /bash_class_assignment.ipynb
+[I 13:44:41.650 NotebookApp] Saving file at /bash_class_assignment.ipynb
+[I 13:46:41.655 NotebookApp] Saving file at /bash_class_assignment.ipynb
+[I 13:48:41.655 NotebookApp] Saving file at /bash_class_assignment.ipynb
+[I 13:50:41.656 NotebookApp] Saving file at /bash_class_assignment.ipynb
+[I 13:52:41.657 NotebookApp] Saving file at /bash_class_assignment.ipynb
+[I 13:54:41.664 NotebookApp] Saving file at /bash_class_assignment.ipynb
+[I 13:57:33.304 NotebookApp] Saving file at /bash_class_assignment.ipynb
+[I 14:00:51.530 NotebookApp] Saving file at /bash_class_assignment.ipynb
+[I 14:00:57.964 NotebookApp] Starting buffering for 29ad042e-1f96-4495-9f5c-dc26b8cfd554:24c1c76a1cf7467f83acda2c541b6cb1
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[Parent 6730, Gecko_IOThread] WARNING: pipe error (131): Connection reset by peer: file /builddir/build/BUILD/firefox-68.12.0/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+^C[I 14:01:51.806 NotebookApp] interrupted
+Serving notebooks from local directory: /media/sf_Emily/CB2_101
+1 active kernel
+The Jupyter Notebook is running at:
+http://localhost:8888/?token=e12bd3048e9cbc84c63e3e04d0c0038c4c275507d965254c
+Shutdown this notebook server (y/[n])? y
+[C 14:01:54.383 NotebookApp] Shutdown confirmed
+[I 14:01:54.384 NotebookApp] Shutting down 1 kernel
+[I 14:01:54.585 NotebookApp] Kernel shutdown: 29ad042e-1f96-4495-9f5c-dc26b8cfd554
+[cb2@dragonxpvb3-009 CB2_101]$ cd
+[cb2@dragonxpvb3-009 ~]$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/cb2/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+
+[cb2@dragonxpvb3-009 ~]$ ls
+Desktop  Documents  Downloads  Pictures  Public  R  Templates  Videos
+[cb2@dragonxpvb3-009 ~]$ cd /home/cb2
+[cb2@dragonxpvb3-009 ~]$ ls
+Desktop  Documents  Downloads  Pictures  Public  R  Templates  Videos
+[cb2@dragonxpvb3-009 ~]$ cd .ssd
+bash: cd: .ssd: No such file or directory
+[cb2@dragonxpvb3-009 ~]$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/cb2/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/cb2/.ssh/id_rsa.
+Your public key has been saved in /home/cb2/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:ubjkann/vW4phEaPXkIuTWfEatoeR3HNhb3J2fVX7S0 cb2@dragonxpvb3-009.ad.hs.uab.edu
+The key's randomart image is:
++---[RSA 2048]----+
+|         .   o +o|
+|          + . + =|
+|         o o  ..X|
+|        *.+   E=*|
+|       XSB     ..|
+|      o.X.=      |
+|     .o=.*   .   |
+|    oo..o ..o    |
+|   ..oo....++.   |
++----[SHA256]-----+
+[cb2@dragonxpvb3-009 ~]$ cat /home/cb2/ssh/id_rsa.pub
+cat: /home/cb2/ssh/id_rsa.pub: No such file or directory
+[cb2@dragonxpvb3-009 ~]$ cat /home/cb2/ .ssh/id_rsa.pub
+cat: /home/cb2/: Is a directory
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC2u6eva+omL/GBIcgTmmT107o+RlRxL0Sgw4FHmZFqiDk8s8kekNuFFEcdFVOdxaTUoplZa1i/j65QfP2bVlD3+1+m/usi2iba9dixXvwFnldBhL/6HR90SH8o+Xnn0gPYS3ihm4YEKBbAYeODLWSa+ECIKJ5K3ep63T6N/wj1qpc/iKHJRLLW1idKhJIow/KVklu5JYCuiegCx/kUkjHZqm++HYpdoD9UyWSDQXDOZcuoOAgq/BBOQMole4UrUpq50sndS9/cjyguZf7OePaLmJXE5Mj7EtslteKVbVT/GO0K47tiewVv4ap3fhQeyv1eBKHH+95QhZ0VpwJGWULH cb2@dragonxpvb3-009.ad.hs.uab.edu
+[cb2@dragonxpvb3-009 ~]$ ls
+Desktop  Documents  Downloads  Pictures  Public  R  Templates  Videos
+[cb2@dragonxpvb3-009 ~]$ cd /
+[cb2@dragonxpvb3-009 /]$ ls
+bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
+boot  etc  lib   media  opt  root  sbin  sys  usr
+[cb2@dragonxpvb3-009 /]$ cd home
+[cb2@dragonxpvb3-009 home]$ ls
+cb2
+[cb2@dragonxpvb3-009 home]$ cd cb2
+[cb2@dragonxpvb3-009 ~]$ ls
+Desktop  Documents  Downloads  Pictures  Public  R  Templates  Videos
+[cb2@dragonxpvb3-009 ~]$ cd ~/.ssh
+[cb2@dragonxpvb3-009 .ssh]$ ls
+id_rsa  id_rsa.pub  known_hosts
+[cb2@dragonxpvb3-009 .ssh]$ cat id_rsa.pub 
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC2u6eva+omL/GBIcgTmmT107o+RlRxL0Sgw4FHmZFqiDk8s8kekNuFFEcdFVOdxaTUoplZa1i/j65QfP2bVlD3+1+m/usi2iba9dixXvwFnldBhL/6HR90SH8o+Xnn0gPYS3ihm4YEKBbAYeODLWSa+ECIKJ5K3ep63T6N/wj1qpc/iKHJRLLW1idKhJIow/KVklu5JYCuiegCx/kUkjHZqm++HYpdoD9UyWSDQXDOZcuoOAgq/BBOQMole4UrUpq50sndS9/cjyguZf7OePaLmJXE5Mj7EtslteKVbVT/GO0K47tiewVv4ap3fhQeyv1eBKHH+95QhZ0VpwJGWULH cb2@dragonxpvb3-009.ad.hs.uab.edu
+[cb2@dragonxpvb3-009 .ssh]$ cd 
+[cb2@dragonxpvb3-009 ~]$ cd /media/sf_Emily
+[cb2@dragonxpvb3-009 sf_Emily]$ ls
+CB2_101
+Comparison of peak torque and aerobic capacity asymmetries in the lower limbs 07162018_1704.docx
+MININT
+pagefile.sys
+$RECYCLE.BIN
+SRS manuscript 07152018_1336.docx
+System Volume Information
+Virtual Machine
+[cb2@dragonxpvb3-009 sf_Emily]$ cd CB2_101
+[cb2@dragonxpvb3-009 CB2_101]$ ls
+bash_class_assignment.ipynb  linux_data  linux_data.tar.xz
+[cb2@dragonxpvb3-009 CB2_101]$ git clone git@github.com:elzumbro/cb2-101-problems.git
+Cloning into 'cb2-101-problems'...
+The authenticity of host 'github.com (140.82.113.4)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+RSA key fingerprint is MD5:16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,140.82.113.4' (RSA) to the list of known hosts.
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+[cb2@dragonxpvb3-009 CB2_101]$ ls
+bash_class_assignment.ipynb  cb2-101-problems  linux_data  linux_data.tar.xz
+[cb2@dragonxpvb3-009 CB2_101]$ cd cb2-101-problems/
+[cb2@dragonxpvb3-009 cb2-101-problems]$ ls
+README.md
+[cb2@dragonxpvb3-009 cb2-101-problems]$ ls -la
+total 9
+drwxrwx---. 1 root vboxsf    0 Nov  8 12:12 .
+drwxrwx---. 1 root vboxsf 4096 Nov  8 12:10 ..
+drwxrwx---. 1 root vboxsf 4096 Nov  8 12:12 .git
+-rwxrwx---. 1 root vboxsf   18 Nov  8 12:12 README.md
+[cb2@dragonxpvb3-009 cb2-101-problems]$ cd ..
+[cb2@dragonxpvb3-009 CB2_101]$ ls
+bash_class_assignment.ipynb  cb2-101-problems  linux_data  linux_data.tar.xz
+[cb2@dragonxpvb3-009 CB2_101]$ git clone git@github.com:cb2edu/CB2-101-BioComp.git
+Cloning into 'CB2-101-BioComp'...
+remote: Enumerating objects: 499, done.
+remote: Counting objects: 100% (14/14), done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 499 (delta 2), reused 12 (delta 2), pack-reused 485
+Receiving objects: 100% (499/499), 396.66 MiB | 15.40 MiB/s, done.
+Resolving deltas: 100% (186/186), done.
+Checking out files: 100% (95/95), done.
+[cb2@dragonxpvb3-009 CB2_101]$ ls
+bash_class_assignment.ipynb  cb2-101-problems  linux_data  linux_data.tar.xz
+[cb2@dragonxpvb3-009 CB2_101]$ cd
+[cb2@dragonxpvb3-009 ~]$ cd /media/sf_Emily
+[cb2@dragonxpvb3-009 sf_Emily]$ ls
+CB2_101
+Comparison of peak torque and aerobic capacity asymmetries in the lower limbs 07162018_1704.docx
+MININT
+pagefile.sys
+$RECYCLE.BIN
+SRS manuscript 07152018_1336.docx
+System Volume Information
+Virtual Machine
+[cb2@dragonxpvb3-009 sf_Emily]$ cd CB2_101
+[cb2@dragonxpvb3-009 CB2_101]$ wget https://raw.githubusercontent.com/elzumbro/CB2-101-BioComp/2021/03-Reproducible_research/git_practicals.ipynb
+--2021-11-08 12:29:11--  https://raw.githubusercontent.com/elzumbro/CB2-101-BioComp/2021/03-Reproducible_research/git_practicals.ipynb
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.110.133, 185.199.109.133, 185.199.111.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.110.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 5720 (5.6K) [text/plain]
+Saving to: ‘git_practicals.ipynb’
+
+100%[======================================>] 5,720       --.-K/s   in 0.002s  
+
+2021-11-08 12:29:11 (3.58 MB/s) - ‘git_practicals.ipynb’ saved [5720/5720]
+
+[cb2@dragonxpvb3-009 CB2_101]$ jupyter-notebook
+[I 12:29:17.813 NotebookApp] Serving notebooks from local directory: /media/sf_Emily/CB2_101
+[I 12:29:17.813 NotebookApp] The Jupyter Notebook is running at:
+[I 12:29:17.813 NotebookApp] http://localhost:8888/?token=de21c35b10393d6c546913ccadef01405228d571575ab5b5
+[I 12:29:17.813 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 12:29:17.820 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/cb2/.local/share/jupyter/runtime/nbserver-14159-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/?token=de21c35b10393d6c546913ccadef01405228d571575ab5b5
+This tool has been deprecated, use 'gio open' instead.
+See 'gio help open' for more info.
+
+[E 12:29:19.689 NotebookApp] Could not open static file ''
+[W 12:29:19.853 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (::1) 95.33ms referer=http://localhost:8888/tree?token=de21c35b10393d6c546913ccadef01405228d571575ab5b5
+[W 12:29:19.913 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (::1) 2.77ms referer=http://localhost:8888/tree?token=de21c35b10393d6c546913ccadef01405228d571575ab5b5
+[W 12:29:26.198 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (::1) 19.89ms referer=http://localhost:8888/notebooks/git_practicals.ipynb
+[W 12:29:26.314 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (::1) 3.79ms referer=http://localhost:8888/notebooks/git_practicals.ipynb
+[W 12:29:26.875 NotebookApp] Notebook git_practicals.ipynb is not trusted
+[W 12:29:26.956 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20211108122917 (::1) 2.40ms referer=http://localhost:8888/notebooks/git_practicals.ipynb
+[I 12:29:28.056 NotebookApp] Kernel started: 92759f81-c3fe-428c-b4ce-e81f5452b2e5
+[I 12:29:29.710 NotebookApp] Adapting to protocol v5.1 for kernel 92759f81-c3fe-428c-b4ce-e81f5452b2e5
+[I 12:35:28.075 NotebookApp] Saving file at /git_practicals.ipynb
+[I 12:37:28.069 NotebookApp] Saving file at /git_practicals.ipynb
+[I 12:39:28.064 NotebookApp] Saving file at /git_practicals.ipynb
+[I 12:40:56.793 NotebookApp] Saving file at /git_practicals.ipynb
+[I 12:42:10.069 NotebookApp] Saving file at /git_practicals.ipynb
+^C[I 12:42:12.506 NotebookApp] interrupted
+Serving notebooks from local directory: /media/sf_Emily/CB2_101
+1 active kernel
+The Jupyter Notebook is running at:
+http://localhost:8888/?token=de21c35b10393d6c546913ccadef01405228d571575ab5b5
+Shutdown this notebook server (y/[n])? y
+[C 12:42:15.347 NotebookApp] Shutdown confirmed
+[I 12:42:15.348 NotebookApp] Shutting down 1 kernel
+[I 12:42:15.616 NotebookApp] Kernel shutdown: 92759f81-c3fe-428c-b4ce-e81f5452b2e5
+[cb2@dragonxpvb3-009 CB2_101]$ ls
+bash_class_assignment.ipynb  git_practicals.ipynb  linux_data.tar.xz
+cb2-101-problems             linux_data            test_class
+[cb2@dragonxpvb3-009 CB2_101]$ cat git_practicals.ipynb 
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Create the assingment repository\n",
+    "\n",
+    "Create the class assingment repository on GitHub. Depending on the course, you might have to use either a repository already provided to you or one that you create. In this hands-on excersize I will use a repository that I have already created for me. I will assign this to a variable that I will use for the rest of this excersize. You should assign the variable to your own repository."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "gitrepo=git@github.com:elzumbro/cb2-101-problems.git"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Let's clone the repository locally. Note that I have a passwordless login for me. In your case this step will require password. You can keep the same name or in this I will change the name to `test_class`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Cloning into 'test_class'...\n",
+      "remote: Enumerating objects: 3, done.\u001b[K\n",
+      "remote: Counting objects: 100% (3/3), done.\u001b[K\n",
+      "remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0\u001b[K\n",
+      "Receiving objects: 100% (3/3), done.\n"
+     ]
+    }
+   ],
+   "source": [
+    "git clone $gitrepo test_class"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Change directory to the repository directory."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\u001b[0m\u001b[38;5;34mREADME.md\u001b[0m\n",
+      "/media/sf_Emily/CB2_101/test_class\n"
+     ]
+    }
+   ],
+   "source": [
+    "cd test_class\n",
+    "ls\n",
+    "pwd"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "We will create the directory for the assignment."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "mkdir assignment1\n",
+    "cd assignment1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "We will create a test file. In your case you should use a real file or copy your existing files here."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "echo \"Hello world\" >hello.txt"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Check the status of directory."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "# On branch main\n",
+      "# Untracked files:\n",
+      "#   (use \"git add <file>...\" to include in what will be committed)\n",
+      "#\n",
+      "#\t./\n",
+      "nothing added to commit but untracked files present (use \"git add\" to track)\n"
+     ]
+    }
+   ],
+   "source": [
+    "git status"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Add the newly added files to the repository."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "git add . -A"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Check the status again."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "# On branch main\n",
+      "# Changes to be committed:\n",
+      "#   (use \"git reset HEAD <file>...\" to unstage)\n",
+      "#\n",
+      "#\tnew file:   hello.txt\n",
+      "#\n"
+     ]
+    }
+   ],
+   "source": [
+    "git status"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Commit the changes."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[main 93920cc] My first commit\n",
+      " Committer: CB2 user <cb2@dragonxpvb3-009.ad.hs.uab.edu>\n",
+      "Your name and email address were configured automatically based\n",
+      "on your username and hostname. Please check that they are accurate.\n",
+      "You can suppress this message by setting them explicitly:\n",
+      "\n",
+      "    git config --global user.name \"Your Name\"\n",
+      "    git config --global user.email you@example.com\n",
+      "\n",
+      "After doing this, you may fix the identity used for this commit with:\n",
+      "\n",
+      "    git commit --amend --reset-author\n",
+      "\n",
+      " 1 file changed, 1 insertion(+)\n",
+      " create mode 100644 assignment1/hello.txt\n"
+     ]
+    }
+   ],
+   "source": [
+    "git commit -m \"My first commit\""
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Push the changes to GitHub."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Warning: Permanently added the RSA host key for IP address '140.82.112.3' to the list of known hosts.\n",
+      "Counting objects: 5, done.\n",
+      "Delta compression using up to 2 threads.\n",
+      "Compressing objects: 100% (2/2), done.\n",
+      "Writing objects: 100% (4/4), 350 bytes | 0 bytes/s, done.\n",
+      "Total 4 (delta 0), reused 0 (delta 0)\n",
+      "To git@github.com:elzumbro/cb2-101-problems.git\n",
+      "   f0ad9e0..93920cc  main -> main\n"
+     ]
+    }
+   ],
+   "source": [
+    "git push origin main"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Now change the content of `hello.txt`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Hello class\n"
+     ]
+    }
+   ],
+   "source": [
+    "echo \"Hello class\" >hello.txt\n",
+    "cat hello.txt"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Check the git status."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "# On branch main\n",
+      "# Changes not staged for commit:\n",
+      "#   (use \"git add <file>...\" to update what will be committed)\n",
+      "#   (use \"git checkout -- <file>...\" to discard changes in working directory)\n",
+      "#\n",
+      "#\tmodified:   hello.txt\n",
+      "#\n",
+      "no changes added to commit (use \"git add\" and/or \"git commit -a\")\n"
+     ]
+    }
+   ],
+   "source": [
+    "git status"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Add and commit the file again."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[main 03bde8f] Second change\n",
+      " Committer: CB2 user <cb2@dragonxpvb3-009.ad.hs.uab.edu>\n",
+      "Your name and email address were configured automatically based\n",
+      "on your username and hostname. Please check that they are accurate.\n",
+      "You can suppress this message by setting them explicitly:\n",
+      "\n",
+      "    git config --global user.name \"Your Name\"\n",
+      "    git config --global user.email you@example.com\n",
+      "\n",
+      "After doing this, you may fix the identity used for this commit with:\n",
+      "\n",
+      "    git commit --amend --reset-author\n",
+      "\n",
+      " 1 file changed, 1 insertion(+), 1 deletion(-)\n"
+     ]
+    }
+   ],
+   "source": [
+    "git add . -A\n",
+    "git commit -m \"Second change\""
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Push the changes again to github."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Warning: Permanently added the RSA host key for IP address '140.82.114.4' to the list of known hosts.\n",
+      "Counting objects: 7, done.\n",
+      "Delta compression using up to 2 threads.\n",
+      "Compressing objects: 100% (2/2), done.\n",
+      "Writing objects: 100% (4/4), 347 bytes | 0 bytes/s, done.\n",
+      "Total 4 (delta 0), reused 0 (delta 0)\n",
+      "To git@github.com:elzumbro/cb2-101-problems.git\n",
+      "   93920cc..03bde8f  main -> main\n"
+     ]
+    }
+   ],
+   "source": [
+    "git push origin main"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Check the log."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "commit 03bde8fae639f4d6a43a826f676efec2b7d25ef2\n",
+      "Author: CB2 user <cb2@dragonxpvb3-009.ad.hs.uab.edu>\n",
+      "Date:   Mon Nov 8 12:39:26 2021 -0500\n",
+      "\n",
+      "    Second change\n",
+      "\n",
+      "commit 93920ccaec2dc61c0aa025dd48e4de17b8a1b745\n",
+      "Author: CB2 user <cb2@dragonxpvb3-009.ad.hs.uab.edu>\n",
+      "Date:   Mon Nov 8 12:38:16 2021 -0500\n",
+      "\n",
+      "    My first commit\n",
+      "\n",
+      "commit f0ad9e0dc4c5ff36d5f13c97fdeb185a8e683830\n",
+      "Author: Malay Basu <malaykbasu@gmail.com>\n",
+      "Date:   Mon Nov 8 11:46:42 2021 -0500\n",
+      "\n",
+      "    Initial commit\n"
+     ]
+    }
+   ],
+   "source": [
+    "git log"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Check out the old file."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Hello world\n"
+     ]
+    }
+   ],
+   "source": [
+    "git checkout HEAD~1 hello.txt\n",
+    "cat hello.txt"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Restore the current version."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Hello class\n"
+     ]
+    }
+   ],
+   "source": [
+    "git checkout HEAD hello.txt\n",
+    "cat hello.txt"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "We just scratched the surface of the git. I suggest you go through a good book like this: https://git-scm.com/book/en/v2"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Bash",
+   "language": "bash",
+   "name": "bash"
+  },
+  "language_info": {
+   "codemirror_mode": "shell",
+   "file_extension": ".sh",
+   "mimetype": "text/x-sh",
+   "name": "bash"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
+[cb2@dragonxpvb3-009 CB2_101]$ jupyter-notebook
+[I 12:43:29.772 NotebookApp] Serving notebooks from local directory: /media/sf_Emily/CB2_101
+[I 12:43:29.772 NotebookApp] The Jupyter Notebook is running at:
+[I 12:43:29.772 NotebookApp] http://localhost:8888/?token=4a1bec175ee16f23652ff2749ca0051836494b3e6a529a02
+[I 12:43:29.772 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 12:43:29.781 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/cb2/.local/share/jupyter/runtime/nbserver-14664-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/?token=4a1bec175ee16f23652ff2749ca0051836494b3e6a529a02
+This tool has been deprecated, use 'gio open' instead.
+See 'gio help open' for more info.
+
+[E 12:43:31.622 NotebookApp] Could not open static file ''
+[W 12:43:31.724 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (::1) 37.39ms referer=http://localhost:8888/tree?token=4a1bec175ee16f23652ff2749ca0051836494b3e6a529a02
+[W 12:43:31.821 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (::1) 3.10ms referer=http://localhost:8888/tree?token=4a1bec175ee16f23652ff2749ca0051836494b3e6a529a02
+[W 12:43:34.784 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (::1) 2.44ms referer=http://localhost:8888/notebooks/git_practicals.ipynb
+[W 12:43:34.969 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (::1) 5.89ms referer=http://localhost:8888/notebooks/git_practicals.ipynb
+[W 12:43:35.693 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20211108124329 (::1) 3.53ms referer=http://localhost:8888/notebooks/git_practicals.ipynb
+[I 12:43:36.916 NotebookApp] Kernel started: 627fe5bb-d2d4-4adb-8df5-53b3402456fb
+[I 12:43:38.612 NotebookApp] Adapting to protocol v5.1 for kernel 627fe5bb-d2d4-4adb-8df5-53b3402456fb
+^C[I 12:44:05.155 NotebookApp] interrupted
+Serving notebooks from local directory: /media/sf_Emily/CB2_101
+1 active kernel
+The Jupyter Notebook is running at:
+http://localhost:8888/?token=4a1bec175ee16f23652ff2749ca0051836494b3e6a529a02
+Shutdown this notebook server (y/[n])? y
+[C 12:44:08.803 NotebookApp] Shutdown confirmed
+[I 12:44:08.803 NotebookApp] Shutting down 1 kernel
+[I 12:44:09.006 NotebookApp] Kernel shutdown: 627fe5bb-d2d4-4adb-8df5-53b3402456fb
+[cb2@dragonxpvb3-009 CB2_101]$ ls
+bash_class_assignment.ipynb  git_practicals.ipynb  linux_data.tar.xz
+cb2-101-problems             linux_data            test_class
+[cb2@dragonxpvb3-009 CB2_101]$ git clone git@github.com:elzumbro/CB2-101-BioComp.git
+Cloning into 'CB2-101-BioComp'...
+Warning: Permanently added the RSA host key for IP address '140.82.112.4' to the list of known hosts.
+remote: Enumerating objects: 499, done.
+remote: Counting objects: 100% (14/14), done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 499 (delta 2), reused 12 (delta 2), pack-reused 485
+Receiving objects: 100% (499/499), 396.66 MiB | 16.28 MiB/s, done.
+Resolving deltas: 100% (186/186), done.
+Checking out files: 100% (95/95), done.
+[cb2@dragonxpvb3-009 CB2_101]$ ls
+bash_class_assignment.ipynb  git_practicals.ipynb  test_class
+CB2-101-BioComp              linux_data
+cb2-101-problems             linux_data.tar.xz
+[cb2@dragonxpvb3-009 CB2_101]$ cd CB2-101-BioComp/
+[cb2@dragonxpvb3-009 CB2-101-BioComp]$ ls
+00-Welcome_and_FAQs       07-NGS_Intro_QC
+01-Linux_101              08-Alignment_and_variant_calling
+02-Introduction_to_R      09-VaraintAnnotation
+03-Reproducible_research  10-RNASeq
+04-Seq_Homology_Search    11-final_problems
+05-Data_Formats           11-single_cell_rnaseq
+05-MolEvol                classnotes
+05-Problemset_2           README.md
+06-R_Bioinfo
+[cb2@dragonxpvb3-009 CB2-101-BioComp]$ 
