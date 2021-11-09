@@ -1,0 +1,262 @@
+getwd()
+setwd("/media/sf_Emily/CB2_101/")
+getwd()
+
+a = 2
+a
+
+a = 2
+print(a)
+a
+
+class(a)
+
+a = "2"
+a
+print(a)
+class(a)
+a + 2 - "2" is a character, not numeric variable
+
+a = "xyz" <-- string characters
+class(a)
+a
+
+2/3
+
+2.0/3.0
+
+# Vector
+
+v <- c(1,2,3,4)
+class(v)
+str(v)
+v1 <- c("a", "b", "c", "d") <-- character vector
+
+v2 <- c(v1, 7)
+
+v1[1]
+v1[2]
+
+length(v1)
+
+for (i in 1:length(v1)) {
+  print( v1[i] )
+}
+
+for (i in 1:length(v1)) {
+  cat( v1[i] )
+}
+
+for (i in 1:length(v1)) {
+  cat(paste(v1[i], "\n"))
+}
+
+l <- c(TRUE, FALSE) <-- if you put "", becomes character variables
+class(l)
+
+1:100
+seq(1, 100, by = 5)
+
+v1[1] <- "z" <-- change value of vectors
+v1
+
+v
+as.character(v)
+as.logical(v)
+as.numeric(v1) <-- doesnt work because variables are abcd not 1234
+as.numeric(v)
+
+
+# list <-- like a vector but can also have a vector as an element
+x <- list()
+x[[1]]
+x <- list("a" = 2.5, "b"=TRUE, "c"=1:3)
+str(x)
+
+x[[1]]
+x[["a"]]
+x$a
+
+x[[3]]
+x[["c"]]
+x$c
+y <- x[[3]]
+y
+y[3]
+x[[3]][3]
+x[["c"]][3]
+x$c[3]
+
+
+x <- list(2.5, TRUE, c(1:3))
+str(x)
+x[[3]][3]
+x$c
+
+
+x[[3]][3]
+length(x)
+x[[1]] <- 3.5
+x
+
+
+
+# Matrix - create empty matrix
+m <- matrix(nrow=2, ncol=3)
+m
+dim(m)
+#first number is rows and second is columns
+#now add individual matrix
+m <- matrix (1:6, nrow=2, ncol=3)
+m
+m <- matrix (1:6, nrow=2, ncol=3, byrow =T)
+m
+#modified by row
+m<- 1:10
+m
+dim(m) <- c(2,5)
+m
+dim(m) <- c(5,2)
+m
+dim(m) <- c(2,5)
+m
+t(m)
+t(m)
+dim(m) <- c(2,5)
+m
+dim(m) <- c(2,5, byrow =T)
+m
+x <- 1:3
+y <- 10:12
+
+rbind(x, y)
+cbind(x, y)
+
+
+#Factors
+x <- factor(c("yes", "yes", "no"))
+class(x)
+levels(x)
+table(x)
+x <- factor(c("yes", "yes", "no"), levels=c("yes", "no"))
+x
+table(x)
+
+?relevel
+#get to help function
+
+
+
+#Missing values
+mis <- c (1:10, NA)
+mean(1:10)
+mean(mis)
+mean(mis, na.rm =T)
+#removes NA from function
+is.na(mis)
+#shows is NA is within vector; NA = TRUE
+mis[!is.na(mis)]
+#! inverses/inverting function; whatever FALSE becomes TRUE
+!is.na(mis)
+
+
+#Data frame- like a spreadsheet; how you will get files
+data("iris")
+#don't need to "" once transformed into an object
+View(iris)
+#goal is to produce dataframe with structured rows and columns
+#fundamental operations
+write.table(x = iris, file = "myiris.tsv", sep = "\t", col.names = TRUE)
+myiris <- read.table("myiris.tsv", header = T)
+myiris
+View("myiris")
+
+
+#Subsetting dataframe
+myiris[1,1]
+#first row,column print
+myiris[1, ]
+#all elements of first row
+myiris[ ,1]
+#all elements of first column
+myiris$Sepal.Length
+
+head(myiris)
+#show few lines in dataset if too large to open
+names(myiris) <- c("a", "b", "c", "d", "e")
+head(myiris)
+myiris$a
+names(myiris)
+mynames <- names(myiris)
+mynames[1] <- "z"
+mynames
+names(myiris) <- mynames
+head(myiris)
+
+myiris[, -5]
+myiris[, -c(2,3)]
+#ignores specific column (-)
+mynames
+mynames[c(2,3)]
+
+
+
+#vectorized operations: everything is a vector in R
+v <- 1:10
+v
+v + 5
+v
+y <- 100:110
+y
+y <- 101:110
+y
+y-v
+
+
+
+
+#Function
+#everything on screen is a function
+hello <- function() {
+  cat("Hello world!")
+}
+#develop function
+hello()
+#execute function
+hello <- function(name="world") {
+  cat ( paste ("Hello", name, "!"))
+}
+hello()
+hello(name="class")
+?print
+
+
+
+#for loops; conditions
+for (i in 1:3) {
+  if (i>1) {
+    cat ("This is greater than one!")
+  }else {
+    cat ("This is one!")
+  }
+}
+
+for (i in 1:3) {
+  if (i>1) {
+    print ("This is greater than one!")
+  }else {
+    print ("This is one!")
+  }
+}
+
+for (i in 1:3) {
+  if (i>1) {
+    print ("This is greater than one!")
+  }else {
+    print ("This is one!")
+  }
+  if (i == 3 ) {
+    print("This is 3")
+  }
+}
+
