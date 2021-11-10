@@ -6,3 +6,23 @@ bash_class_assignment.ipynb  CHR_Un                linux_data.tar.xz  NT_033777.
 CB2-101-BioComp              classnotesDay4.R      listing.sh         NT_033778.faa
 cb2-101-problems             ftp.ncbi.nlm.nih.gov  myiris.tsv         NT_033779.faa
 CHR_2                        git_practicals.ipynb  NC_004353.faa      NT_037436.faa
+
+[cb2@dragonxpvb3-009 CB2_101]$ head -n 5 9606.tsv 
+#Pfam-A regions from Pfam version 34.0 for ncbi taxid 9606 'Homo sapiens (Human)'
+#Total number of proteins in proteome: 75768
+#<seq id> <alignment start> <alignment end> <envelope start> <envelope end> <hmm acc> <hmm name> <type> <hmm start> <hmm end> <hmm length> <bit score> <E-value> <clan>
+A0A024QZ33	5	123	4	123	PF09745	DUF2040	Coiled-coil	2121	121	125.3	4.1e-33	No_clan
+A0A024QZ42	25	83	22	86	PF13499	EF-hand_7	Domain	468	71	42.4	2.2e-07	CL0220
+
+[cb2@dragonxpvb3-009 CB2_101]$ head 9606.tsv 
+#Pfam-A regions from Pfam version 34.0 for ncbi taxid 9606 'Homo sapiens (Human)'
+#Total number of proteins in proteome: 75768
+#<seq id> <alignment start> <alignment end> <envelope start> <envelope end> <hmm acc> <hmm name> <type> <hmm start> <hmm end> <hmm length> <bit score> <E-value> <clan>
+A0A024QZ33	5	123	4	123	PF09745	DUF2040	Coiled-coil	2121	121	125.3	4.1e-33	No_clan
+A0A024QZ42	25	83	22	86	PF13499	EF-hand_7	Domain	468	71	42.4	2.2e-07	CL0220
+A0A024QZP7	4	287	4	287	PF00069	Pkinase	Domain	1	264	264	257.7	3.5e-73	CL0016
+A0A024QZW4	48	338	48	339	PF08449	UAA	Family	1	301	302	313.8	3.5e-90	CL0184
+A0A024QZX5	11	380	10	380	PF00079	Serpin	Domain	2	370	370	434.3	1.3e-126	No_clan
+A0A024R0K5	40	140	38	141	PF07686	V-set	Domain	3	108	109	49.8	1e-09	CL0011
+A0A024R0K5	239	318	239	318	PF13895	Ig_2	Domain	1	79	79	63.2	6.8e-14	CL0011
+
