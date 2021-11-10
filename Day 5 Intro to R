@@ -1,0 +1,335 @@
+setwd("/media/sf_Emily/CB2_101") <-- set working directory
+
+cat("Hello world!")
+cat(paste("A", "B"))
+cat(paste0("A","B"))
+cat(paste("A", "B", sep = ""))
+
+#Data frame
+data("iris")
+View(iris)
+write.table(x = iris, file = "myiris.tsv", 
+            sep = "\t", col.names = T, quote = F)
+myiris <- read.table("myiris.tsv", header = T)
+myiris
+View("myiris")
+
+#Splitting data frame
+data("iris")
+View(iris)
+table(iris$Species)
+dim(iris)
+
+split_iris <- split(iris, iris$Species)
+View(split_iris)
+
+# Q. Avg. Sepal.Length of Setosa
+summary(iris)
+summary(split_iris)
+summary(split_iris$setosa)
+iris_setosa <- split_iris$setosa
+View(iris_setosa)
+mean(Sepal.Length$iris_setosa)
+
+##split way of doing this
+split_iris[[1]]
+split_iris[["setosa"]]
+split_iris$setosa
+
+mean(split_iris[[1]]$Sepal.Length)
+mean(split_iris[["setosa"]]$Sepal.Length)
+mean(split_iris$setosa$Sepal.Length)
+
+##conditional way
+setosa <- iris[ iris$Species =="setosa" , ]
+View(setosa)
+mean(setosa$Sepal.Length)
+
+
+#Do for all three species
+##for loop
+###cat function to run 3 times (3 species)
+for ( i in iris$Species) {
+  cat (paste0(i, "\n"))
+} #ran 150 times, not what we want
+
+###search for unique function (like used in bash)
+for ( i in unique(iris$Species)) {
+  cat (paste0(i, "\n"))
+}
+###inside the loop, i is the species name
+for ( i in unique(iris$Species)) {
+  sp.dataframe <- iris[ iris$Species == "setosa", ]
+  cat ( paste0(dim(sp.dataframe)[1], "\n"))
+}
+
+###gives only mean
+for ( i in unique(iris$Species)) {
+  sp.dataframe <- iris[ iris$Species == i, ]
+  result  <- mean(sp.dataframe$Sepal.Length)
+  cat ( paste0(result, "\n"))
+}
+
+###add species name
+
+###doesn't give space
+for ( i in unique(iris$Species)) {
+  sp.dataframe <- iris[ iris$Species == i, ]
+  result  <- mean(sp.dataframe$Sepal.Length)
+  cat ( paste0(i, result, "\n"))
+}
+###gives space between variables
+for ( i in unique(iris$Species)) {
+  sp.dataframe <- iris[ iris$Species == i, ]
+  result  <- mean(sp.dataframe$Sepal.Length)
+  cat ( paste0(i, " ", result, "\n"))
+}
+
+
+
+
+#Apply
+lapply()
+apply(array, marin, ...)
+?apply
+?lapply
+##can write over lists
+##lapply will take every element of split_iris and put into variable x
+results_list <- lapply(split_iris, function(x){ 
+  mean_value <- mean (x$Sepal.Length)
+   return(mean_value)
+  })
+
+results_list
+###rearrange from list to rows and columns
+unlist(results_list)
+
+results_df <- data.frame(flower_name = names(results_list),
+                         mean.sepal.length = unlist(results_list))
+results_df
+
+###what is sum of individual rows/columns in iris? get rid of species column
+###used in RNAseq
+####remove last column (species)
+numeric.iris <- iris[, -5]
+apply(numeric.iris, MARGIN = 1, sum)
+####returns a vector 
+numeric.iris$sum.rows <- apply(numeric.iris, MARGIN = 1, sum)
+View(numeric.iris)
+####add row number to data
+nrow(numeric.iris)
+numeric.iris[nrow(numeric.iris) + 1, ] <-
+  apply(numeric.iris, MARGIN = 1, sum)
+View(numeric.iris)
+#### + 1 adds new column (added sum of row)
+c(1:nrow(numeric.iris) -1, "Total")
+rownames(numeric.iris) <- c(1: (nrow(numeric.iris) -1), "Total")
+View(numeric.iris)
+#### for some reason, not giving actual sum of columns (lower number)
+
+
+
+
+
+#Regular Expression (Regex)
+
+##\n = new line
+##\t = tab
+##\s = space
+##/S = nonspace
+##/d = number/digit
+## * = any or nothng
+## . = corresponding character
+##^ = beginning of the line
+##$ = end of the line
+
+ex. \s + 5
+.5 (5x a character)
+
+>gi |12345| ref | ABCDEF (NCBI ID)
+start line with ^>\| \d+ \ | ref \| \S+
+  #extract from this strain:
+  start line with ^>\| (\d+) \ | ref \| \S+
+  \ = escape symbol
+"I scored 100" --> search for \d+
+  "I scored 100 in math and 200 in physics"
+math & physics = ABCDEF; 100 & 200 = 12345
+math = \s(m*)\s
+
+##now in R
+text <- "gi|12345|ref|ABCDEF"
+##Regular expression code and interested in extracting # and ABCDEF
+p <- "gi\|(\d+)\|ref\|(\S+)"
+##use \\ in R
+p <- "gi\\|(\\d+)\\|ref\\|(\\S+)"
+
+textarray <- c("apple", "banana", "apricot")
+##look for any text that starts with "a"
+grep("^a", textarray)
+##list names of fruit that starts with "a"
+textarray[grep("^a", textarray)]
+
+p <- "gi\\|(\\d+)\\|ref\\|(\\S+)"
+text <- "gi|12345|ref|ABCDEF"
+m <- regexec(p, text, perl = TRUE)
+s <- regmatches(text, m)
+
+s[[1]][2] #prints GI(number)
+s[[1]][3] #accession(text)
+s
+
+test <- "I scored 100 in math!"
+p <- "\\s(\\d+)\\s"
+m <- regexec(p, test, perl = TRUE)
+s <- regmatches(test, m)
+s[[1]][2]
+
+p <- "gi\\|(\\d+)\\|ref\\|(\\S+)"
+
+test1 <- "I scored 100 in math! And 200 in physics."
+p <- "\\s(\\d+)\\s"
+m <- gregexpr(p, test1, perl = TRUE)
+s <- regmatches(test1, m)
+s
+s[[1]][2]
+
+##code writes space_number_space_in_space_text_space
+###not finished
+test <- "I scored 100 in math! And 200 in physics."
+p <- "\\s(\\d+)\\sin\\s+(\\S+)"
+m <- gregexpr(p, test, perl = TRUE)
+s <- regmatches(test, m)
+s
+s[[1]][2]
+s[[1]][3]
+###not finished
+##String R
+
+
+
+#Plotting
+2 types of plots: base graphics plot (basic plots already installed in R) and ggplot2
+how to install packages from bioconductor: BiocManager::install()
+##calls install function from specific package (BiocManager) - BiocManager can install packages from bioconducter and CRAN
+library(ggplot2)
+
+##scatter plot (base plot)
+plot(iris)
+plot(iris$Sepal.Length, iris$Sepal.Width)
+plot(iris$Sepal.Length, iris$Sepal.Width, main = "Sepal length vs Sepal width")
+plot(iris$Sepal.Length, iris$Sepal.Width, 
+     main = "Sepal length vs Sepal width",
+     xlab="Sepal length", ylab="Sepal width")
+plot(iris$Sepal.Length, iris$Sepal.Width, 
+     main = "Sepal length vs Sepal width",
+     xlab="Sepal length", ylab="Sepal width",
+     col=iris$Species)
+
+png()
+pdf() - maintains scalability of plot when exported
+svg()
+
+pdf(file = "first_plot.pdf", width = 8.5, height = 8.5)
+plot(iris$Sepal.Length, iris$Sepal.Width, 
+     main = "Sepal length vs Sepal width",
+     xlab="Sepal length", ylab="Sepal width",
+     col=iris$Species)
+dev.off()
+
+par() - changes parameters of plot (font size, etc)
+?par
+##r graphics code book - free##
+
+##ggplot does not accept anything outside dataframe
+library(ggplot2)
+##aes() kills ggplot and tells what is x and y
+g <- ggplot(iris, aes(Sepal.Length, Sepal.Width)) +
+  geom_point()
+g
+g <- ggplot(iris, aes(Sepal.Length, Sepal.Width)) +
+  geom_point() + theme_classic()
+g
+g <- ggplot(iris, aes(Sepal.Length, Sepal.Width)) +
+  geom_point() + theme_classic() + labs(title="Sepal length vs Sepal width")
+g
+g <- ggplot(iris, aes(Sepal.Length, Sepal.Width)) +
+  geom_point() + theme_classic()
+g
+g <- g + labs(title="Sepal length vs Sepal width",
+              x="Sepal length", y="Sepal width")
+g
+
+
+
+###now do for petal length/width
+plot(iris)
+plot(iris$Petal.Length, iris$Petal.Width)
+plot(iris$Petal.Length, iris$Petal.Width, main = "Petal length vs Petal width")
+plot(iris$Petal.Length, iris$Petal.Width, 
+     main = "Petal length vs Petal width",
+     xlab="Petal length", ylab="Petal width")
+plot(iris$Petal.Length, iris$Petal.Width, 
+     main = "Petal length vs Petal width",
+     xlab="Petal length", ylab="Petal width",
+     col=iris$Species)
+
+
+pdf(file = "iris_petalplot.pdf", width = 8.5, height = 8.5)
+plot(iris$Petal.Length, iris$Petal.Width, 
+     main = "Petal length vs Petal width",
+     xlab="Petal length", ylab="Petal width",
+     col=iris$Species)
+dev.off()
+
+gp <- ggplot(iris, aes(x=Petal.Length, y=Petal.Width)) +
+  geom_point(aes(colour=Species))
+gp
+gp <- gp + labs(title="Petal length vs Petal width")
+gp
+
+gp <- ggplot(iris, aes(x=Petal.Length, y=Petal.Width, colour=Species)) +
+  geom_point() + theme_classic()
+gp
+gp <- gp + labs(title="Petal length vs Petal width")
+gp
+
+
+
+#Histogram
+random_numbers <- rnorm(100)
+hist(random_numbers)
+g <- ggplot(data.frame(x=random_numbers), aes(x=x) ) +
+  geom_histogram()
+g
+g <- ggplot(data.frame(x=random_numbers), aes(x=x) ) +
+  geom_histogram() + theme_classic()
+g
+
+
+
+#Boxplot
+have to reformat data frame
+g <- ggplot(iris, aes(x=Species, y =Sepal.Length)) +
+  geom_boxplot()
+g
+##boxplot displays median, upper and bottom quartiles, interquartile range
+
+boxplot(iris) --> rearrange data to generate general boxplot
+
+
+
+#Barplot
+data(mtcars)
+View(mtcars)
+
+row.names(mtcars)
+mtcars$name <- row.names(mtcars)
+
+
+library(ggplot2)
+g <- ggplot(mtcars, aex(x=factor(gear),y=factor(cyl)))
+
+
+
+
+
