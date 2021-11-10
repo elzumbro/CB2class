@@ -1,0 +1,34 @@
+cat *.faa | grep \>
+>gi|386771669|ref|NP_001246897.1| CG40045, isoform B [Drosophila melanogaster]
+>gi|116007886|ref|NP_001036641.1| synapse protein 25, isoform A [Drosophila melanogaster]
+>gi|386771671|ref|NP_001036642.2| synapse protein 25, isoform C [Drosophila melanogaster]
+>gi|386771673|ref|NP_001246898.1| synapse protein 25, isoform D [Drosophila melanogaster]
+>gi|161085896|ref|NP_001097670.1| neverland [Drosophila melanogaster]
+>gi|116007908|ref|NP_001036652.1| mitochondrial ribosomal protein S5, isoform C [Drosophila melanogaster]
+>gi|116007910|ref|NP_001036653.1| mitochondrial ribosomal protein S5, isoform A [Drosophila melanogaster]
+>gi|116007906|ref|NP_001036651.1| mitochondrial ribosomal protein S5, isoform D [Drosophila melanogaster]
+
+cat *.faa | grep -v \>
+MSQTLIRRLFNQACSRNIFILNQSLLSSHEPILPGYIGLRNTSFFNKLPAEDIWRGVTAVSNAGKKRGRG
+KGSGKKVAKDLNKGQSIGFGKCGRIWPGLNSPLIRGNELINQQKLNENLDRENGILKLRDSMGSFKLMKL
+NPIDRGWSGSKMPGRSIGPPDPVGDEEFVSFDTRVLENKIVFIMKGNMGRKRRYSVLSVTGNGNGLAGFA
+TAKAPEVRTALRKSKNRAGQKLINISLCENRTIFHDFRTDFGKTKIFCFQKPDGYGLVCHRAIQTICKVI
+GIKDLYAKIEGSTNIQNIAKAFFIGLMTQRSYQYIANETNSNIVQLQKTRNRFIDVKGMPFPNSTLTQNT
+QEIDYMHFTLGNQIVLQRKGTVPFYVYSKGHDLHQFKKERFRNQVNVRLHKLVNAYD
+MSQTLIRRLFNQACSRNIFILNQSLLSSHEPILPGYIGLRNTSFFNK
+
+[cb2@dragonxpvb3-009 CB2_101]$ find ftp.ncbi.nlm.nih.gov/ -name "*.faa" -print
+ftp.ncbi.nlm.nih.gov/genomes/archive/old_refseq/Drosophila_melanogaster/RELEASE_5_48/CHR_2/NT_033778.faa
+ftp.ncbi.nlm.nih.gov/genomes/archive/old_refseq/Drosophila_melanogaster/RELEASE_5_48/CHR_2/NT_033779.faa
+ftp.ncbi.nlm.nih.gov/genomes/archive/old_refseq/Drosophila_melanogaster/RELEASE_5_48/CHR_3/NT_033777.faa
+ftp.ncbi.nlm.nih.gov/genomes/archive/old_refseq/Drosophila_melanogaster/RELEASE_5_48/CHR_3/NT_037436.faa
+ftp.ncbi.nlm.nih.gov/genomes/archive/old_refseq/Drosophila_melanogaster/RELEASE_5_48/CHR_4/NC_004353.faa
+ftp.ncbi.nlm.nih.gov/genomes/archive/old_refseq/Drosophila_melanogaster/RELEASE_5_48/CHR_X/NC_004354.faa
+
+[cb2@dragonxpvb3-009 CB2_101]$ find ftp.ncbi.nlm.nih.gov/ -name "*.faa" -exec cp {} . \;
+[cb2@dragonxpvb3-009 CB2_101]$ ls
+bash_class_assignment.ipynb  CHR_3                 git_practicals.ipynb  myiris.tsv     NT_033778.faa
+CB2-101-BioComp              CHR_Un                linux_data            NC_004353.faa  NT_033779.faa
+cb2-101-problems             classnotesDay4.R      linux_data.tar.xz     NC_004354.faa  NT_037436.faa
+CHR_2                        ftp.ncbi.nlm.nih.gov  listing.sh            NT_033777.faa  test_class
+[cb2@dragonxpvb3-009 CB2_101]$ 
