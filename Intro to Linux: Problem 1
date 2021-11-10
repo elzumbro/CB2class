@@ -1,0 +1,8 @@
+[cb2@dragonxpvb3-009 CB2_101]$ wget ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/proteomes/9606.tsv.gz
+[cb2@dragonxpvb3-009 CB2_101]$ gunzip 9606.tsv.gz
+[cb2@dragonxpvb3-009 CB2_101]$ ls
+9606.tsv                     CHR_3                 linux_data         NC_004354.faa  test_class
+bash_class_assignment.ipynb  CHR_Un                linux_data.tar.xz  NT_033777.faa
+CB2-101-BioComp              classnotesDay4.R      listing.sh         NT_033778.faa
+cb2-101-problems             ftp.ncbi.nlm.nih.gov  myiris.tsv         NT_033779.faa
+CHR_2                        git_practicals.ipynb  NC_004353.faa      NT_037436.faa
