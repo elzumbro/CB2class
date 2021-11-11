@@ -1,0 +1,133 @@
+#Regular expression
+text <- "I scored 100 in math and 200 in physics."
+text
+##pattern
+p <- "\\s(\\d+)\\s+in\\s+(\\S+)"
+p
+gsub(".", "", t)
+m <- gregexec(p, t, perl = T) <-- not in this version of R; in newest version of R (4+)
+regmatches(t, m)
+
+
+
+#Barplot
+data(mtcars)
+View(mtcars)
+head(mtcars)
+
+row.names(mtcars)
+library(ggplot2)
+g <- ggplot (mtcars, aes(x=factor(gear), fill=factor(cyl)))+
+  geom_barplot()
+
+cy6mpg <- mtcars[mtcars$cyl ==6,]
+cy6mpg <- mean(cy6mpg$mpg)
+
+cy4mpg <- mtcars[mtcars$cyl ==4,]
+cy4mpg <- mean(cy4mpg$mpg)
+
+bdf <- data.frame(x=c("Cyl 4", "Cyl 6"), y=c(cy4mpg, cy6mpg))
+
+g <- ggplot(bdf, aes(x, y)) +
+  geom_bar(stat = "identity")
+g
+
+
+
+#Grouped barplot - 2 variables per group/3 total (cylinders(x-axis) vs mpg (y1-axis) vs weight (y2-axis))
+##fill() function#
+##create data.frame
+
+cy6 <- mtcars[mtcars$cyl ==6,]
+cy6mpg <- mean(cy6$mpg)
+cy6wt <- mean(cy6$wt)
+
+cy4 <- mtcars[mtcars$cyl ==4,]
+cy4mpg <- mean(cy4$mpg)
+cy4wt <- mean(cy4$wt)
+
+bdf <- data.frame(x=c("Cyl 4", "Cyl 6"), mpg=c(cy4mpg, cy6mpg),
+                  wt = c(cy4wt, cy6wt))
+
+g <- ggplot(bdf, aes(x, fill=wt)) +
+  geom_bar(stat="identity")
+g
+##not complete - have to melt data
+
+
+
+
+
+#Statistics in R
+mean
+median
+can calculate mode from freqency table
+hist(rnorm(100)) <-- can take normal distribution from random sample
+##Normal distribution
+?pnorm
+pnorm(.5)
+pnorm(.0001)
+1 - pnorm(0.5)
+1 - pnorm(0.9)
+1 - pnorm(0.01)
+pnorm(.01)
+
+##Statistical modeling
+###Pearson correlation - looking for linear correlation
+###Spearman correlation - used for non-linear data; uses order of data for analyses
+cor.test(iris$Sepal.Length, iris$Sepal.Width)
+?cor.test
+
+ctest <- cor.test(iris$Sepal.Length, iris$Sepal.Width)
+ctest$p.value
+###storing p value
+ctest$estimate
+###estimate ranges from -1 to +1
+
+##Regression
+###linear regression
+plot(iris)
+plot(iris$Sepal.Length, iris$Sepal.Width, col=iris$Species)
+cor(iris[,-5]) 
+###removes Species; shows all correlation between categories/variables
+x <- iris$Petal.Length
+y <- iris$Petal.Width
+####taking y as a dependent varable and x as independent variable in code below
+model <- lm(y~x)
+summary(model)
+####equation from results is as follows: y = 0.415x - 0.363 (regression equation)
+cor.test(x,y)
+plot(x,y)
+abline(model)
+####gives a linear line in model
+
+####feature selection - y=Petal.Width
+model1 <- lm(y~iris$Sepal.Length+iris$Sepal.Width+iris$Petal.Length)
+summary(model1)
+####all 3 comparisons are significant
+
+#####mtcars data practice set - mpg as dependent variable; what variables correlate with mpg; what is best car for mpg?
+row.names(mtcars)
+mtcars$name <- row.names(mtcars)
+
+y <- mtcars$mpg
+plot(mtcars)
+cor(mtcars)
+cor.test(mtcars$mpg, mtcars$cyl)
+model2 <- lm(y~mtcars$cyl + mtcars$wt + mtcars$disp + mtcars$hp + mtcars$drat + mtcars$qsec + mtcars$vs + mtcars$am + mtcars$gear + mtcars$carb)
+model2
+summary(model2)
+
+plot(mtcars)
+cor(mtcars)
+model <- lm(y~mtcars$cyl+mtcars$disp+mtcars$wt)
+cor.test(mtcars$mpg, mtcars$cyl)
+model <- lm(y~mtcars$cyl + mtcars$wt + mtcars$disp)
+model
+
+
+
+
+
+
+
