@@ -28,3 +28,5 @@ A0A024R0K5	239	318	239	318	PF13895	Ig_2	Domain	1	79	79	63.2	6.8e-14	CL0011
 
 [cb2@dragonxpvb3-009 CB2_101]$ cut -f 6 9606.tsv | sort | uniq -c | wc -l
 6633
+[cb2@dragonxpvb3-009 CB2_101]$ cut -f 6 9606.tsv | sort | wc -l
+108694 <-- number if don't reduce to duplicates (uniq -c)
