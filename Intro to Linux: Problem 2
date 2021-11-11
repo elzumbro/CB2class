@@ -1,0 +1,12 @@
+wget -r -A.faa "ftp://ftp.ncbi.nlm.nih.gov/genomes/archive/old_refseq/Bacteria/Yersinia_pestis_*"
+[cb2@dragonxpvb3-009 CB2_101]$ cd ftp.ncbi.nlm.nih.gov/genomes/
+[cb2@dragonxpvb3-009 genomes]$ ls
+archive
+[cb2@dragonxpvb3-009 genomes]$ cd archive/old_refseq/Bacteria/
+[cb2@dragonxpvb3-009 Bacteria]$ ls
+Yersinia_pestis_A1122_uid158119                        Yersinia_pestis_D106004_uid158071
+Yersinia_pestis_Angola_uid58485                        Yersinia_pestis_D182038_uid158073
+Yersinia_pestis_Antiqua_uid58607                       Yersinia_pestis_KIM_10_uid57875
+Yersinia_pestis_biovar_Medievalis_Harbin_35_uid158537  Yersinia_pestis_Nepal516_uid58609
+Yersinia_pestis_biovar_Microtus_91001_uid58037         Yersinia_pestis_Pestoides_F_uid58619
+Yersinia_pestis_CO92_uid57621                          Yersinia_pestis_Z176003_uid47317
