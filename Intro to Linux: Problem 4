@@ -1,0 +1,20 @@
+# wget "ftp://ftp.ncbi.nlm.nih.gov/genomes/archive/old_refseq/Bacteria/Escherichia_coli_K_12_substr__MG1655_uid57779/NC_000913.faa"
+# 
+# ls
+# less "NC 000913.faa"
+# head NC_000913.faa
+
+##part a
+file=NC_000913.faa
+prot_num=`cat $file | grep ">" | wc -l`
+seq_length=`cat $file | grep -v ">" | tr -d "\n" | wc -m`
+echo $seq_length/$prot_num | bc
+
+echo "316"
+
+
+##part b
+file="*.faa"
+prot_num=`cat $file | grep ">" | wc -l`
+seq_length=`cat $file | grep -v ">" | tr -d "\n" | wc -m`
+echo $seq_length/$prot_num | bc
